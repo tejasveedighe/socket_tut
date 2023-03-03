@@ -3,6 +3,10 @@
 	"version": "0.0.1",
 	"description": "basic socket tut",
 	"dependencies": {
-		"express": "^4.18.2"
+		"express": "^4.18.2",
+		"nodemon": "^2.0.21"
+	},
+	"scripts": {
+		"start": "nodemon index.js"
 	}
 }
