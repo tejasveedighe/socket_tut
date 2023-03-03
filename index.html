@@ -88,6 +88,13 @@
             messages.appendChild(item);
             window.scrollTo(0, document.body.scrollHeight)
         })
+
+        socket.on("new user connected", function () {
+            alert("new user connceted to chat")
+        })
+        socket.on("user_disconnected", function () {
+            alert("a user disconnted")
+        })
     </script>
 </body>
 

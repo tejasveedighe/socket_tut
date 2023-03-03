@@ -16,9 +16,14 @@ io.emit("some event", {
 }); // This will emit the event to all connected sockets
 
 io.on("connection", (socket) => {
+	io.emit("new user connected");
 	socket.on("chat message", (msg) => {
 		console.log("message", msg);
 		io.emit("chat message", msg);
+	});
+	socket.on("disconnect", () => {
+		io.emit("user_disconnected");
+		console.log("new user disconnected");
 	});
 });
 
